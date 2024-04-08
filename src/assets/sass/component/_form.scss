@@ -10,6 +10,10 @@ form{
   }
 }
 
+.form-body {
+  position: relative;
+}
+
 .form-enter{
   @extend form;
   display: flex;
@@ -66,7 +70,69 @@ form{
   }
 }
 
+// Send Result
 
+.success {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: none;
+  opacity: 0;
+  transition: all .25s ease;
+  span {
+    display: block;
+    width: 100%;
+    z-index: 1000;
+    text-transform: uppercase;
+    font-family: "Bentonsans Medium", sans-serif;
+    color: #012456;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 0 .5rem;
+    @include minMedia(400) {
+      padding: 0 1rem;
+    }
+    @include minMedia(400) {
+      font-size: 30px;
+      padding: 0 2rem;
+    }
+  }
+  &.success-mail {
+    display: flex;
+    align-items: center;
+    opacity: 1;
+  }
+}
+.success~* {
+  transition: all .5s ease;
+}
+.success-mail~* {
+  opacity: .6;
+  filter: blur(12px);
+}
+
+// Form-footer input
+
+.form-footer {
+  .form-target_page-email,
+  .form-target_page-number,
+  .form-target_page-phone,
+  .form-target_page-text,
+  .helpmess {
+    border: 0 !important;
+    font-size: 0 !important;
+    height: 0 !important;
+    line-height: 0 !important;
+    padding: 0 !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    width: 0 !important;
+  }
+}
 
 // input[type=email]
 
