@@ -1,0 +1,12 @@
+section, .section {
+  position: relative;
+  min-height: 200px;
+  z-index: 1;
+}
+
+.section-type{
+  padding: 7vw 0;
+  @include minMedia(550) {
+    padding: 5vw 0;
+  }
+}

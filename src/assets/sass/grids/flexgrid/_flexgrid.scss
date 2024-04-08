@@ -1,0 +1,89 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  ) !default;
+
+$grid-columns: 12 !default;
+
+.container {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+  @include minMedia(576) {
+    max-width: 540px;
+  }
+  @include minMedia(768) {
+    max-width: 720px;
+  }
+  @include minMedia(992) {
+    max-width: 960px;
+  }
+  @include minMedia(1200) {
+    max-width: 1140px;
+  }
+  @include minMedia(1400) {
+    max-width: 1320px;
+  }
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+
+.row > * {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-height: 1px;
+  position: relative;
+}
+
+// $styles: (
+//   ".col-2": (width: calc((100% / 12)*2)),
+//   ".col-3": (width: calc((100% / 12)*3)),
+//   ".col-4": (width: calc((100% / 12)*4)),
+//   ".col-5": (width: calc((100% / 12)*5)),
+//   ".col-6": (width: 50%),
+//   ".col-7": (width: calc((100% / 12)*7)),
+//   ".col-8": (width: calc((100% / 12)*8)),
+//   ".col-10": (width: calc((100% / 12)*10)),
+//   ".col-12": (width: 100%),
+// );
+
+$styles: (
+  ".col-20": (width: calc((100% / 10)*2)),
+  ".col-30": (width: calc((100% / 10)*3)),
+  ".col-33": (width: calc((100% / 10)*3.3333)),
+  ".col-40": (width: calc((100% / 10)*4)),
+  ".col-50": (width: 50%),
+  ".col-60": (width: calc((100% / 10)*6)),
+  ".col-70": (width: calc((100% / 10)*7)),
+  ".col-80": (width: calc((100% / 10)*8)),
+  ".col-100": (width: 100%),
+);
+
+@include generate_styles($styles);
+
+[class*=" col-"],
+[class^="col-"] {
+  padding: 0 12px;
+  min-height: 1px;
+  position: relative;
+  @include minMedia(800) {
+    padding: 0 15px;
+  }
+}

@@ -1,0 +1,26 @@
+@keyframes text {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// ==================================== //
+
+.element-animation {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.element-animation.element-show {
+  opacity: 1;
+  transition: all 1s ease;
+  transform: translateY(0%);
+}
+
+// ==================================== //

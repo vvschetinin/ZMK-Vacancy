@@ -1,0 +1,114 @@
+
+.s-vacancytop{
+  position: relative;
+  .swiper-wrapper{
+    padding: 1rem 0;
+    padding-bottom: 70px;
+    @include minMedia(1100) {
+      padding-bottom: 85px;
+    }
+    @include minMedia(1400) {
+      padding-bottom: 20px;
+    }
+  }
+  .swiper-slide{
+    padding: 0;
+    @include minMedia(550) {
+      padding: 0 10px;
+    }
+  }
+  .button-nav{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    color: #111;
+    background-color: rgba(224, 232, 246, 1.0);
+    z-index: 10;
+    @include minMedia(1400) {
+      display: none;
+    }
+    span{
+      color: #007AFF;
+      padding-left: 5px;
+    }
+    &-prev{
+      left: 5vw;
+      rotate: 180deg;
+      @include minMedia(1100) {
+        right: 15vw;
+      }
+    }
+    &-next {
+      right: 5vw;
+      @include minMedia(1100) {
+        right: 15vw;
+      }
+    }
+  }
+}
+
+.vacancy-pagination{
+  &.swiper-pagination-fraction {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: "Noir-pro";
+    font-size: 20px;
+    font-weight: 600;
+    color: #0A1739;
+  }
+}
+
+.vacancy-card{
+  width: 100%;
+  padding: 0;
+  height: auto;
+  min-height: 200px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  transition: all .25s ease;
+  box-shadow: none;
+  &:hover{
+    box-shadow: 0px 2px 33px -5px rgba(34, 60, 80, 0.09);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .card-title{
+    padding: 1rem;
+    height: auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    @include minMedia(800) {
+      min-height: 95px;
+    }
+    h2 {
+      font-family: "Noir-pro";
+      font-size: 20px;
+      font-weight: 600;
+      color: #0A1739;
+      line-height: 1.4;
+    }
+  }
+  &-detail{
+    width: 100%;
+    padding: 1rem;
+    padding-top: 1.5rem;
+    .list-detail {
+      font-family: "Noir-pro";
+      font-size: 16px;
+      font-weight: 600;
+      color: #0A1739;
+    }
+    span:not([class]){
+      font-family: "Roboto";
+      display: block;
+      font-weight: 300;
+    }
+  }
+}

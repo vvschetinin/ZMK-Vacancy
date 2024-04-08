@@ -1,0 +1,87 @@
+// Section Map
+
+.map-layout{
+  @extend section;
+  padding: 5vw 0;
+  @include minMedia(800) {
+    padding: 0;
+  }
+}
+
+.map-sidebar{
+  position: relative;
+  width: 100%;
+  @include minMedia(800) {
+    width: 40%;
+  }
+  @include minMedia(1400) {
+    width: 33.3333%;
+  }
+  .map-details{
+    padding: 0;
+    padding-bottom: 3vw;
+    @include minMedia(800) {
+      padding: 4.167vw;
+      padding-left: 0;
+    }
+  }
+  h2{
+    font-family: "Noir-pro";
+    font-size: 22px;
+    font-weight: 600;
+    color: #0A1739;
+    padding-bottom: 2rem;
+  }
+  p{
+    margin: 0;
+    line-height: 1.45;
+  }
+  span.line{
+    display: block;
+    width: 100%;
+    height: .5px;
+    background-color: $brand;
+    margin: 1.5rem 0 1.3rem 0;
+  }
+  .social-item{
+    padding-left: 1rem;
+    &:first-child{
+      padding-left: 0;
+    }
+  }
+  a:not([class]){
+    display: inline-block;
+    padding-left: .5rem;
+  }
+}
+
+.map-media {
+  position: relative;
+  flex-grow: 1;
+  background-color: hsla(0, 0%, 100%, .025);
+  width: 100%;
+  &:before{
+    content: "";
+    display: block;
+    padding-top: 60%;
+    @include minMedia(800) {
+      display: none;
+    }
+  }
+  @include minMedia(800) {
+    width: 60%;
+  }
+  @include minMedia(1400) {
+    width: 66.6666%;
+  }
+  .map{
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #DDE3E9;
+  }
+}
+

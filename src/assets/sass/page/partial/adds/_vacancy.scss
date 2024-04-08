@@ -1,0 +1,149 @@
+.ourvacancy-all{
+  @extend section;
+}
+
+.vacancy-list{
+  position: relative;
+  width: 100%;
+  max-width: 1350px;
+}
+
+.more-wrap{
+  margin-top: 4rem;
+  @include minMedia(550) {
+    margin-top: 3rem;
+  }
+  .btn-bg--red {
+    background: #921B11;
+    color: #fff;
+    font-weight: 500;
+    min-height: 45px;
+    padding: 8px 20px 8px 15px;
+    border-radius: 4px;
+    @include minMedia(800) {
+      min-height: 47px;
+      padding: 8px 18px 8px 18px;
+    }
+    &:hover {
+      background: #e63323;
+    }
+  }
+}
+
+.vacancy-item{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: 3px;
+  width: 100%;
+  opacity: 1;
+  transition: all .5s ease;
+  &+.vacancy-item{
+    margin-top: 1rem;
+  }
+  &:nth-child(n + 5) {
+    opacity: 0;
+    display: none;
+  }
+  &.is-visible {
+    opacity: 1;
+    display: flex;
+  }
+  &-detail{
+    width: 100%;
+    padding: 1.25rem;
+    padding-bottom: 0;
+    @include minMedia(800) {
+      width: 50%;
+      padding-bottom: 1.25rem;
+    }
+    @include minMedia(1100) {
+      width: 40%;
+    }
+    @include minMedia(1400) {
+      width: 33.3333%;
+    }
+    h2{
+      font-family: "Noir-pro";
+      font-size: 22px;
+      font-weight: 600;
+      color: #0A1739;
+      padding-bottom: 2rem;
+      span{
+        display: block;
+        font-family: "Roboto";
+        font-weight: 300;
+        margin-top: .5rem;
+      }
+      &.accent{
+        font-size: 25px;
+        padding-bottom: 0;
+      }
+    }
+    p {
+      margin: 0;
+      line-height: 1.45;
+    }
+    .list-detail{
+      font-family: "Noir-pro";
+      font-size: 18px;
+      font-weight: 600;
+      color: #0A1739;
+      span {
+        display: block;
+        font-family: "Roboto";
+        font-weight: 300;
+        margin-bottom: .5rem;
+      }
+      li{
+        &:last-child{
+          span{
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  &-body{
+    position: relative;
+    width: 100%;
+    padding: 1.25rem;
+    @include minMedia(800) {
+      width: 50%;
+    }
+    @include minMedia(1100) {
+      width: 60%;
+    }
+    @include minMedia(1400) {
+      width: 66%;
+    }
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 1rem;
+      left: 0;
+      bottom: 1rem;
+      width: 1px;
+      background-color: rgba(0, 0, 0, .1);
+    }
+    h3 {
+      font-family: "Noir-pro";
+      font-size: 18px;
+      font-weight: 600;
+      color: #0A1739;
+      padding-bottom: .5rem;
+      margin-top: .5rem;
+    }
+    p {
+      margin: 0;
+      line-height: 1.45;
+    }
+  }
+  &-footer{
+    padding: 1rem;
+    width: 100%;
+    background-color: #f5f5f5;
+  }
+}

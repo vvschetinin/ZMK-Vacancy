@@ -1,0 +1,48 @@
+header {
+  height: auto;
+  position: relative;
+  z-index: 50;
+}
+
+.header {
+  @extend header;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  .header-inner{
+    padding: 30px 0;
+  }
+  &-nav-inner{
+    display: flex;
+    align-items: center;
+  }
+  .ourname{
+    color: #fff;
+    padding-left: 1rem;
+    text-transform: uppercase;
+    li{
+      font-size: 20px;
+      line-height: 1.5;
+    }
+  }
+}
+
+.mainlogo-wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  border: 1px solid #fff;
+  .logo-main {
+    width: auto;
+    height: 60px;
+    @include minMedia(800) {
+      height: 70px;
+    }
+  }
+}
+
+
+
+

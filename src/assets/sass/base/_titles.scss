@@ -1,0 +1,119 @@
+.h1 {
+  font-size: 34px;
+  @include minMedia(550) {
+    font-size: 3rem;
+    line-height: 1.15;
+  }
+  @include minMedia(800) {
+    font-size: 3.5rem;
+  }
+  @include minMedia(1100) {
+    font-size: 4.0rem;
+  }
+  @include minMedia(1400) {
+    font-size: 4.2rem;
+  }
+  @media (max-height: 450px) and (orientation: landscape) {
+    font-size: 38px;
+  }
+  span{
+    font-family: "Noir-pro";
+    font-weight: 400;
+  }
+}
+
+.h2 {
+  font-size: 28px;
+  @include minMedia(550) {
+    font-size: 2.8rem;
+  }
+  @include minMedia(800) {
+    font-size: 2.8rem;
+  }
+  @include minMedia(1100) {
+    font-size: 3.1rem;
+  }
+  @include minMedia(1400) {
+    font-size: 3.3rem;
+  }
+  @media (max-height: 450px) and (orientation: landscape) {
+    font-size: 30px;
+  }
+  span {
+    font-family: "BaskerCir";
+    font-weight: 400;
+  }
+}
+
+.subtitle {
+  font-size: 22px;
+  @include minMedia(550) {
+    font-size: 1.6rem;
+  }
+  @include minMedia(800) {
+    font-size: 1.6rem;
+  }
+  @include minMedia(1100) {
+    font-size: 1.8rem;
+  }
+  @include minMedia(1400) {
+    font-size: 2.1rem;
+  }
+  @media (max-height: 450px) and (orientation: landscape) {
+    font-size: 30px;
+  }
+  span {
+    font-family: "BaskerCir";
+    font-weight: 400;
+    font-style: italic;
+  }
+}
+
+.vacancy-hero{
+  .h1 {
+    font-size: calc(34px * $ksizemin);
+    @include minMedia(550) {
+      font-size: calc(3rem * $ksizemin);
+      line-height: 1.15;
+    }
+    @include minMedia(800) {
+      font-size: calc(3.5rem * $ksizemin);
+    }
+    @include minMedia(1100) {
+      font-size: calc(4rem * $ksizemin);
+    }
+    @include minMedia(1400) {
+      font-size: calc(4.2rem * $ksizemin);
+    }
+    @media (max-height: 450px) and (orientation: landscape) {
+      font-size: calc(38px * $ksizemin);
+    }
+    span {
+      font-family: "Noir-pro";
+      font-weight: 400;
+    }
+  }
+  .subtitle {
+    font-size: calc(22px * $ksizemin);
+    @include minMedia(550) {
+      font-size: calc(1.6rem * $ksizemin);
+    }
+    @include minMedia(800) {
+      font-size: calc(1.6rem * $ksizemin);
+    }
+    @include minMedia(1100) {
+      font-size: calc(1.8rem * $ksizemin);
+    }
+    @include minMedia(1400) {
+      font-size: calc(2.1rem * $ksizemin);
+    }
+    @media (max-height: 450px) and (orientation: landscape) {
+      font-size: calc(30px * $ksizemin);
+    }
+    span {
+      font-family: "BaskerCir";
+      font-weight: 400;
+      font-style: italic;
+    }
+  }
+}

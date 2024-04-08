@@ -1,0 +1,210 @@
+footer {
+  height: auto;
+  position: relative;
+  z-index: 5;
+}
+
+.footer{
+  @extend footer;
+  background: #2f2f2f;
+  padding: 40px 0 150px;
+  color: #ffff;
+  &:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    transform: skew(-45deg);
+    width: 75%;
+    background: #222;
+  }
+  a:not([class]) {
+    color: #fff;
+    transition: all .25s ease;
+    &:hover {
+      opacity: .5;
+    }
+  }
+  .logo-footer{
+    position: relative;
+    display: inline-block;
+    margin: 5rem auto 0;
+    img{
+      max-width: 62px;
+      @include minMedia(550) {
+        max-width: 80px;
+      }
+      @include minMedia(800) {
+        max-width: 100px;
+      }
+      @include minMedia(1100) {
+        max-width: 120px;
+      }
+    }
+  }
+}
+
+.footer-nav {
+  position: relative;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 -10px;
+    flex-direction: column;
+    @include minMedia(800) {
+      flex-direction: row;
+    }
+  }
+  .menu-item {
+    padding: 0;
+    @include minMedia(800) {
+      padding: 0 10px;
+    }
+    &+.menu-item{
+      margin-top: 5px;
+      @include minMedia(800) {
+        margin-top: 0;
+      }
+    }
+    a {
+      font-family: "Roboto";
+      font-size: 14px;
+      font-weight: 400;
+      display: inline-block;
+      color: #fff;
+      padding: 0;
+      @include minMedia(800) {
+        font-size: 16px;
+        padding: 10px;
+      }
+    }
+    span{
+      margin-right: .5rem;
+      @include minMedia(800) {
+        margin-right: 0;
+      }
+    }
+    &:first-child{
+      font-size: 23px;
+      @include minMedia(800) {
+        font-size: 27px;
+      }
+    }
+    &:last-child{
+      font-size: 21px;
+      @include minMedia(800) {
+        font-size: 25px;
+      }
+    }
+  }
+}
+.footer-copyright{
+  ul.address {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    color: hsla(0, 0%, 100%, .6);
+    margin: 0 -10px 0;
+    font-size: 16px;
+    text-align: center;
+    @include minMedia(1100) {
+      font-size: 18px;
+      flex-direction: row;
+    }
+    li{
+      position: relative;
+      padding: 0;
+      @include minMedia(1100) {
+        padding: 0 15px;
+      }
+      &:not(:first-child):before {
+        @include minMedia(1100) {
+          position: absolute;
+          content: "|";
+          top: 0;
+          left: 0;
+        }
+      }
+      &+li{
+        margin-top: 5px;
+        @include minMedia(1100) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+ul.footer-copyright-author {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin: 0 -20px;
+  font-size: 14px;
+  @include minMedia(550) {
+    flex-direction: row;
+  }
+  li {
+    position: relative;
+    font-family: "Roboto";
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    &:not(:first-child):before {
+      @include minMedia(550) {
+        content: "";
+        width: .5px;
+        height: 30px;
+        background: #fff;
+        position: absolute;
+        top: 5px;
+        left: 0;
+      }
+    }
+    span {
+      font-family: "Lato-Italic", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      margin-right: 0;
+      @include minMedia(550) {
+        margin-right: 10px;
+      }
+    }
+    a.logo-author {
+      display: inline-block;
+      padding: 10px;
+      padding-left: 0;
+      transition: all .25s ease;
+      &:hover {
+        color: hsla(0, 0%, 100%, .6);
+      }
+      span {
+        display: inline-block;
+        text-transform: uppercase;
+        padding-left: 3px;
+      }
+    }
+  }
+}
+
+
+
+.header-banner-footer {
+  display: none !important;
+}
